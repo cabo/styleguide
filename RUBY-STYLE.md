@@ -1,10 +1,18 @@
 # Christian Neukirchen's Ruby Style Guide
 
+(updated for 2013 by Carsten Bormann)
+
+Christian's original preface:
+
 You may not like all rules presented here, but they work very well for
 me and have helped producing high quality code.  Everyone is free to
 code however they want, write and follow their own style guides, but
 when you contribute to my code, please follow these rules:
 
+Carsten's addition:
+
+In reality, this is now pretty much common style for Rubyists.
+Your code will be less readable for others if you don't follow it.
 
 ## Formatting:
 
