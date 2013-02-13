@@ -16,14 +16,17 @@ Your code will be less readable for others if you don't follow it.
 
 ## Formatting:
 
-* Use ASCII (or UTF-8, if you have to — this is now default in Ruby 2.0).
+* Use ASCII.
+      * Use UTF-8, if you have to — this is now default in Ruby 2.0.
 
-* Use 2 space indent, never tabs.
+* Use 2 space indent, never tab characters.
 
 * Use Unix-style line endings.
 
-* Use spaces around operators, after commas, colons and semicolons,
-  around `{` and before `}`.
+* Use spaces:
+      * around operators,
+      * after commas, colons and semicolons,
+      * around `{` and before `}`.
 
 * No spaces after `(`, `[` and before `]`, `)`.
 
@@ -55,7 +58,7 @@ Your code will be less readable for others if you don't follow it.
 
 * Use `when` x`;` ... for one-line cases.
 
-* Use `&&`/`||` for boolean expressions, and/or for control flow.  (Rule
+* Use `&&`/`||` for boolean expressions, `and`/`or` for control flow.  (Rule
   of thumb: If you have to use outer parentheses, you are using the
   wrong operators.)
 
@@ -65,8 +68,8 @@ Your code will be less readable for others if you don't follow it.
   when calling "functions", i.e. when you use the return value in the
   same line.
 
-    x = Math.sin(y)
-    array.delete e
+        x = Math.sin(y)
+        my_array.delete e
 
 * Prefer `{`...`}` over `do`...`end`.  Multiline `{`...`}` is fine: having
   different statement endings (`}` for blocks, `end` for `if`/`while`/...)
@@ -84,16 +87,16 @@ Your code will be less readable for others if you don't follow it.
 
 * Use `||=` freely.
 
-* Use non-OO regexps (they won't make the code better).  Freely use
-  `=~`, `$0`-`$9`, `$~`, ``$` `` and `$'` when needed.
+* Freely use non-OO regexps (OO won't make the code better here).
+  Freely use `=~`, `$0`-`$9`, `$~`, ``$` `` and `$'` when needed.
 
 
 ## Naming:
 
 * Use `snake_case` for methods.
 
-* Use `CamelCase` for classes and modules.  (Keep acronyms like HTTP,
-  RFC, XML uppercase.)
+* Use `CamelCase` for classes and modules.  
+  (Keep acronyms like HTTP, RFC, XML uppercase.)
 
 * Use `SCREAMING_SNAKE_CASE` for other constants.
 
@@ -105,7 +108,8 @@ Your code will be less readable for others if you don't follow it.
          d: directory names
          e: elements of an Enumerable
          ex: rescued exceptions
-         f: files and file names
+         f: files
+         fn: file names
          i,j: indexes
          k: the key part of a hash entry
          m: methods
@@ -126,9 +130,9 @@ Your code will be less readable for others if you don't follow it.
 
 * When defining binary operators, name the argument "`other`".
 
-* Prefer `map` over `collect`, `find` over `detect`, `find_all` over `select`,
+* Prefer `map` over `collect`, `find` over `detect`,
   `size` over `length`.
-
+  (Prefer `select` over `find_all`.)
 
 ## Comments:
 
@@ -159,7 +163,7 @@ Your code will be less readable for others if you don't follow it.
 * Use `OptionParser` for parsing complex command line options and
   `ruby -s` for trivial command line options.
 
-* No longer write for Ruby 1.8.
+* No longer write for Ruby 1.8.  
   Freely do things you know that would have broken in 1.8.
 
 * Avoid needless metaprogramming.
@@ -186,6 +190,8 @@ Your code will be less readable for others if you don't follow it.
 
 * Read other style guides and apply the parts that don't dissent with
   this list.
+
+      * See in particular: https://github.com/bbatsov/ruby-style-guide
 
 * Be consistent.
 
